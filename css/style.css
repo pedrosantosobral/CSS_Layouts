@@ -1,0 +1,153 @@
+/* ================================= 
+  Base Styles
+==================================== */
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Varela Round', sans-serif;
+	line-height: 1.6;
+	color: #3a3a3a;
+}
+
+p {
+	font-size: .95em;
+	margin-bottom: 1.5em;
+}
+
+h2,
+h3,
+a {
+	color: #093a58;
+}
+
+h2,
+h3 {
+	margin-top: 0;
+}
+
+a {
+	text-decoration: none;
+}
+
+/* ================================= 
+  Base Layout Styles
+==================================== */
+
+/* ---- Navigation ---- */
+
+.name {
+	font-size: 1.25em;
+}
+
+.name,
+.main-nav li {
+	text-align: center;
+	background: #fff;
+	margin-top: 6px;
+	margin-bottom: 6px;
+}
+
+.name a,
+.main-nav a {
+	padding: 10px 15px;
+	text-align: center;
+    display: block;
+}
+
+	.main-nav a {
+		font-size: .95em;
+		color: #3acec2;
+		text-transform: uppercase;
+	}
+	
+	.main-nav a:hover {
+		color: #093a58;
+	}
+
+/* ---- Layout Containers ---- */
+
+.container {
+	padding-left: 1em;
+	padding-right: 1em;
+}
+
+.main-header {
+	padding-top: 1.5em;
+	padding-bottom: 1.5em;
+	background: #3acec2;
+    margin-bottom: 30px;
+}
+
+.main-footer {
+	text-align: center;
+	padding: 2em 0;
+	background: #d9e4ea;
+}
+
+/* ================================= 
+  Media Queries
+==================================== */
+
+@media (min-width: 789px) { 
+    /*STICKY FOOTER to bottom of page - use wrap to all other content and use min-height*/
+    /*uar calc function para compensar pelo tamanho do footer que cria a scrool bar */
+    /* o que isto faz é retira a altura do footer ao viewport do resto do conteudo*/
+	.wrap {
+		min-height: calc(100vh - 89px);
+	}
+
+	.container {
+		width: 85%;
+		max-width: 1150px;
+		margin: 0 auto;
+	}
+
+	.feat-img {
+        
+        margin-right:25px;
+        width: 300px;
+        float:left ;
+
+    }
+    
+    .name {
+        float:left;
+    }
+
+    .main-nav{
+        float:right;
+    }
+
+    .main-nav li{
+        float:left;
+        margin-left:12px;
+    }
+
+    /*fix collased container with float elements*/
+    .clearfix::after{
+        content: "";
+        display:table;
+        /*property to move content below the float elements*/
+        clear:both;
+    }
+
+    /*float both columns*/
+    .col{
+       float:left;                                                                                                                                             
+
+    }
+
+    .primary{
+        width: 50%;
+        padding-right: 1.5em;
+    }
+
+    .secondary{
+        width: 50%;
+        padding-left: 1.5em ;
+    }
+
+}
